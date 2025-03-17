@@ -1,11 +1,12 @@
 {
   "scripts": {
+    "clean": "rm -rf _site .jekyll-cache",
     "css:dev": "npx @tailwindcss/cli -i styles/main.css -o _site/styles/main.css --watch",
     "css:build": "npx @tailwindcss/cli -i styles/main.css -o _site/styles/main.css --minify",
     "jekyll:dev": "bundle exec jekyll serve --watch --livereload -o",
     "jekyll:build": "JEKYLL_ENV=production bundle exec jekyll build",
     "dev": "concurrently \"npm run css:dev\" \"npm run jekyll:dev\"",
-    "build": "npm run css:build && npm run jekyll:build"
+    "build": "npm run clean && npm run css:build && npm run jekyll:build"
   },
   "devDependencies": {
     "postcss": "8.5.3",
