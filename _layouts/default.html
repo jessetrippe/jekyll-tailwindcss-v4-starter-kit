@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{ page.title | default: site.title }}</title>
+	<link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body class="bg-white dark:bg-slate-900 text-slate-900 dark:text-white">
+	<header class="container mx-auto px-4 py-6">
+		<h1 class="text-3xl font-bold">{{ site.title | default: "Jekyll with Tailwind CSS v4" }}</h1>
+		<nav class="mt-4">
+			<ul class="flex space-x-4">
+				<li><a href="/" class="text-blue-600 dark:text-blue-400 hover:underline">Home</a></li>
+				<li><a href="/about" class="text-blue-600 dark:text-blue-400 hover:underline">About</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main class="container mx-auto px-4 py-6">
+		{{ content }}
+	</main>
+
+	<footer class="container mx-auto px-4 py-6 border-t border-slate-200 dark:border-slate-700">
+		<p class="text-sm text-slate-600 dark:text-slate-400">
+			&copy; {{ site.time | date: '%Y' }} {{ site.title | default: "Jekyll with Tailwind CSS v4" }}
+		</p>
+	</footer>
+</body>
+
+</html>

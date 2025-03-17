@@ -1,0 +1,16 @@
+title: Jekyll with Tailwind CSS v4
+description: A starter template for Jekyll with Tailwind CSS v4 integration
+baseurl: ""
+url: ""
+
+# Exclude from processing
+exclude:
+  - node_modules
+  - package.json
+  - package-lock.json
+  - tailwind.config.js
+  - postcss.config.js
+  - README.md
+  
+include:
+  - _pages
