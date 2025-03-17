@@ -6,7 +6,7 @@
     "jekyll:dev": "bundle exec jekyll serve --watch --livereload -o",
     "jekyll:build": "JEKYLL_ENV=production bundle exec jekyll build",
     "dev": "concurrently \"npm run css:dev\" \"npm run jekyll:dev\"",
-    "build": "npm run clean && npm run css:build && npm run jekyll:build"
+    "build": "npm run clean && npm run jekyll:build && npm run css:build"
   },
   "devDependencies": {
     "postcss": "8.5.3",
